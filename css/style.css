@@ -12,6 +12,87 @@ h1{
     font-family: 'Righteous', cursive;
 }
 
+.modal{
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(255, 255, 255, 0.8);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1;
+    padding: 20px;
+}
+
+.modal-confirm{
+    width: 100%;
+    max-width: 450px;
+
+    background-color: #50D074;
+    color: #FFFFFF;
+
+    font-size: 22px;
+    padding: 20px;
+    /* padding-bottom: 10px; */
+    border-radius: 9px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .25);
+}
+
+.modal-confirm h2{
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.items div, .total-order{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.total-order{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.modal-confirm button{
+    width: 100%;
+    height: 52px;
+    border: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.modal-confirm .button-confirm{
+    
+    border-radius: 100px;
+    background-color: #FFFFFF;
+    color: #50D074;
+    font-size: 22px;
+}
+
+.modal-confirm .button-cancel{
+    width: 100%;
+    color: #FFFFFF;
+    line-height: 23px;
+    font-size: 20px;
+    background-color: transparent;
+
+}
+
+.hidden{
+    display: none;
+}
+
 header{
     width: 100vw;
     height: 92px;
@@ -59,7 +140,7 @@ section .title{
     letter-spacing: -0.018em;
 }
 
-section .dishes{
+section .options{
     overflow: hidden;
     overflow-x: scroll;
     scrollbar-width: none;
@@ -70,7 +151,7 @@ section .dishes{
     display: flex;
 }
 
-.dishes::-webkit-scrollbar{
+.options::-webkit-scrollbar{
     display: none;
 }
 
@@ -82,10 +163,10 @@ section img{
     border-radius: 4px;
 }
 
-.dish{
+.option{
     background-color: #FFFFFF;
     width: 172px;
-    height: 216px;
+    height: auto;
 
     padding: 18px 13px;
     margin-right: 16px;
@@ -96,7 +177,7 @@ section img{
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
 }
 
-.dish div:nth-child(2){
+.option div:nth-child(2){
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
@@ -104,7 +185,7 @@ section img{
     margin: 8px 0 8px;
 }
 
-.dish div:nth-child(3){
+.option div:nth-child(3){
     font-style: normal;
     font-weight: 300;
     font-size: 15px;
@@ -113,17 +194,26 @@ section img{
     margin-bottom: 12px;
 }
 
-.dish div:nth-child(4){
+.option div:nth-child(4){
     font-weight: 400;
     font-size: 16px;
     line-height: 18px;
     color: #000000;
 }
 
-.dish .check{
+.option .check{
     opacity: 0;
     color: #32B72F;
     font-size: 20px; 
+}
+
+main .container section .options .option.select{
+    border: 5px solid #32B72F;
+    padding: 13px 9px;
+}
+
+main .container section .options .option.select .check{
+    opacity: 1;
 }
 
 footer{
@@ -161,6 +251,10 @@ footer a{
 }
 
 
+.active{
+    background-color: #32B72F;
+    font-weight: 700;
+}
 
 
 
