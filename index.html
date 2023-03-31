@@ -44,7 +44,7 @@
                 <div class="total-text">Total</div>
                 <div class="total-num">-----</div>
             </div>
-            <button data-test="confirm-order-btn" class="button-confirm">Tudo certo, pode pedir</button>
+            <button data-test="confirm-order-btn" class="button-confirm" onclick="sendMessage()">Tudo certo, pode pedir</button>
             <button data-test="cancel-order-btn" class="button-cancel" onclick="cancelOrder()">Cancelar</button>
         </div>
     </div>
@@ -64,30 +64,30 @@
                 </div>
                 <div class="options dishes">
                     <div class="option dish" onclick="selectDish(event)">
-                        <img src="./images/frango_yin_yang.png" />
-                        <div class="title-order">Frango Yin Yang</div>
-                        <div>Um pouco de batata, um pouco de salada</div>
-                        <div class="price-order">R$ 16,90</div>
+                        <img src="./images/samgyopsal.jpg" />
+                        <div class="title-order">Samgyeopsal</div>
+                        <div>Um pouco de Kim chi, um pouco de salada</div>
+                        <div class="price-order">R$ 175,00</div>
                         <div class="check">
                             <ion-icon name="checkmark-circle"></ion-icon>
                         </div>
                     </div>
 
                     <div class="option dish" onclick="selectDish(event)">
-                        <img src="./images/frango_yin_yang.png" />
-                        <div class="title-order">Frango Yin Yang</div>
-                        <div>Um pouco de batata, um pouco de salada</div>
-                        <div class="price-order">R$ 14,90</div>
+                        <img src="./images/bibimpap.jpeg" />
+                        <div class="title-order">Bibimpap</div>
+                        <div>Com pimenta, com muitos legumes</div>
+                        <div class="price-order">R$ 52,70</div>
                         <div class="check">
                             <ion-icon name="checkmark-circle"></ion-icon>
                         </div>
                     </div>
 
                     <div class="option dish" onclick="selectDish(event)">
-                        <img src="./images/frango_yin_yang.png" />
-                        <div class="title-order">Frango Yin Yang</div>
-                        <div>Um pouco de batata, um pouco de salada</div>
-                        <div class="price-order">R$ 14,90</div>
+                        <img src="./images/Bulgogi.jpg" />
+                        <div class="title-order">Bulbogi Beef</div>
+                        <div>Acompanha arroz, contem salada</div>
+                        <div class="price-order">R$ 59,00</div>
                         <div class="check">
                             <ion-icon name="checkmark-circle"></ion-icon>
                         </div>
@@ -101,30 +101,30 @@
                 </div>
                 <div class="options drinks">
                     <div class="option drink" onclick="selectDrink(event)">
-                        <img src="./images/coca-cola.png" />
-                        <div class="title-order">Coquinha gelada</div>
-                        <div>Lata 350ml</div>
-                        <div class="price-order">R$ 4,90</div>
+                        <img src="./images/Achimhaetsal.jpeg.crdownload" />
+                        <div class="title-order">Achimhaetsal</div>
+                        <div>Garrafa 500ml</div>
+                        <div class="price-order">R$ 15,00</div>
                         <div class="check">
                             <ion-icon name="checkmark-circle"></ion-icon>
                         </div>
                     </div>
 
-                    <div class="option drink" onclick="selectDrink(event)"">
-                        <img src=" ./images/coca-cola.png" />
-                    <div class="title-order">Coquinha gelada</div>
-                    <div>Lata 350ml</div>
-                    <div class="price-order">R$ 4,90</div>
+                    <div class="option drink" onclick="selectDrink(event)">
+                        <img src="./images/soju.jpeg" />
+                    <div class="title-order">Soju</div>
+                    <div>Garrafa 360ml</div>
+                    <div class="price-order">R$ 25,00</div>
                     <div class="check">
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </div>
 
-                <div class="option drink" onclick="selectDrink(event)"">
-                        <img src=" ./images/coca-cola.png" />
-                <div class="title-order">Coquinha gelada</div>
+                <div class="option drink" onclick="selectDrink(event)">
+                        <img src="./images/lemon-soda.jpeg" />
+                <div class="title-order">Lemon Soda</div>
                 <div>Lata 350ml</div>
-                <div class="price-order">R$ 4,90</div>
+                <div class="price-order">R$ 7,90</div>
                 <div class="check">
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
@@ -138,30 +138,30 @@
             </div>
             <div class="options desserts">
                 <div class="option dessert" onclick="selectDessert(event)">
-                    <img src="./images/pudim.png" />
-                    <div class="title-order">Pudim</div>
-                    <div>Apenas pudim</div>
-                    <div class="price-order">R$ 7,90</div>
+                    <img src="./images/yasik.jpg" />
+                    <div class="title-order">Yasik</div>
+                    <div>Acompanha frutas secas e nozes</div>
+                    <div class="price-order">R$ 27,90</div>
                     <div class="check">
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </div>
 
                 <div class="option dessert" onclick="selectDessert(event)">
-                    <img src="./images/pudim.png" />
-                    <div class="title-order">Pudim</div>
-                    <div>Apenas pudim</div>
-                    <div class="price-order">R$ 7,90</div>
+                    <img src="./images/danpatjuk.jpg" />
+                    <div class="title-order">Danpatjuk</div>
+                    <div>Apenas Danpatjuk</div>
+                    <div class="price-order">R$ 17,50</div>
                     <div class="check">
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </div>
 
                 <div class="option dessert" onclick="selectDessert(event)">
-                    <img src="./images/pudim.png" />
-                    <div class="title-order">Pudim</div>
-                    <div>Apenas pudim</div>
-                    <div class="price-order">R$ 7,90</div>
+                    <img src="./images/songpyeon.jpg" />
+                    <div class="title-order">Songpyeon</div>
+                    <div>Com sementes de gergelim</div>
+                    <div class="price-order">R$ 45,00</div>
                     <div class="check">
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>

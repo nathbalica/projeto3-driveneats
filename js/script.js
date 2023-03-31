@@ -10,7 +10,7 @@ let priceDish;
 let priceDrink;
 let priceDessert;
 
-
+let total= 0;
 
 
 
@@ -113,7 +113,7 @@ function placeOrder(){
             price: priceDessert
         }
     }
-    let total= 0.0;
+
     for (let i = 0; i < list_items.length; i++) {
         let itemType = type_item[i];
         let item = items[itemType];
@@ -147,6 +147,7 @@ function cancelOrder() {
     priceDish = undefined;
     priceDrink = undefined;
     priceDessert = undefined;
+    total = 0;
 
     const markedPlatesDessert = document.querySelectorAll('.desserts .select');
     const markedPlatesDishes = document.querySelectorAll('.dishes .select');
@@ -165,3 +166,23 @@ function cancelOrder() {
     });
   }
 
+function sendMessage(){
+    const name = prompt('Qual o seu nome?')
+    const address = prompt('Qual o seu endereço?')
+
+    const messageWtt = encodeURIComponent(`
+    Olá, gostaria de fazer o pedido:\n
+    - Prato: ${titleDish},
+    - Bebida: ${titleDrink},
+    - Sobremesa: ${titleDessert},
+    Total: ${total.toFixed(2)}
+    \n
+    Nome: ${name}
+    Endereço: ${address}
+    `)
+
+    console.log(messageWtt);
+    const linkWtt = `https://wa.me/5561991581058?text=${messageWtt}`
+    
+    window.location = linkWtt;
+}
