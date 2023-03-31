@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,39 +9,43 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@100;300;400;500;700&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
 
     <title>driveneats</title>
 </head>
+
 <body>
     <div class="modal hidden">
         <div data-test="confirm-order-modal" class="modal-confirm">
-                <div class="title"><h2>Confirme seu pedido</h2></div>
-                <div class="items">
-                    <div class="item-dish">
-                        <div class="name">Frango Yin Yang</div>
-                        <div class="price">14,90</div>
-                    </div>
-
-                    <div class="item-drink">
-                        <div class="name">Coquinha gelada</div>
-                        <div class="price">4,90</div>
-                    </div>
-
-                    <div class="item-dessert">
-                        <div class="name">Pudim</div>
-                        <div class="price">7,90</div>
-                    </div>
+            <div class="title">
+                <h2>Confirme seu pedido</h2>
+            </div>
+            <div class="items">
+                <div class="item-dish">
+                    <div class="name">-----</div>
+                    <div class="price">-----</div>
                 </div>
-                <div class="total-order">
-                    <div class="total-text">Total</div>
-                    <div class="total-num">R$ **</div>
+
+                <div class="item-drink">
+                    <div class="name">------</div>
+                    <div class="price">-----</div>
                 </div>
-                <button data-test="confirm-order-btn" class="button-confirm">Tudo certo, pode pedir</button>
-                <button data-test="cancel-order-btn" class="button-cancel">Cancelar</button>
+
+                <div class="item-dessert">
+                    <div class="name">-----</div>
+                    <div class="price">------</div>
+                </div>
+            </div>
+            <div class="total-order">
+                <div class="total-text">Total</div>
+                <div class="total-num">-----</div>
+            </div>
+            <button data-test="confirm-order-btn" class="button-confirm">Tudo certo, pode pedir</button>
+            <button data-test="cancel-order-btn" class="button-cancel" onclick="cancelOrder()">Cancelar</button>
         </div>
     </div>
 
@@ -54,13 +59,15 @@
     <main>
         <div class="container">
             <section>
-                <div class="title"><h1>Primeiro, seu prato</h1></div>
+                <div class="title">
+                    <h1>Primeiro, seu prato</h1>
+                </div>
                 <div class="options dishes">
                     <div class="option dish" onclick="selectDish(event)">
                         <img src="./images/frango_yin_yang.png" />
                         <div class="title-order">Frango Yin Yang</div>
                         <div>Um pouco de batata, um pouco de salada</div>
-                        <div class="price-order">R$ 14,90</div>
+                        <div class="price-order">R$ 16,90</div>
                         <div class="check">
                             <ion-icon name="checkmark-circle"></ion-icon>
                         </div>
@@ -89,7 +96,9 @@
             </section>
 
             <section>
-                <div class="title"><h1>Agora, sua bebida</h1></div>
+                <div class="title">
+                    <h1>Agora, sua bebida</h1>
+                </div>
                 <div class="options drinks">
                     <div class="option drink" onclick="selectDrink(event)">
                         <img src="./images/coca-cola.png" />
@@ -102,66 +111,68 @@
                     </div>
 
                     <div class="option drink" onclick="selectDrink(event)"">
-                        <img src="./images/coca-cola.png" />
-                        <div class="title-order">Coquinha gelada</div>
-                        <div>Lata 350ml</div>
-                        <div class="price-order">R$ 4,90</div>
-                        <div class="check">
-                            <ion-icon name="checkmark-circle"></ion-icon>
-                        </div>
-                    </div>
-
-                    <div class="option drink" onclick="selectDrink(event)"">
-                        <img src="./images/coca-cola.png" />
-                        <div class="title-order">Coquinha gelada</div>
-                        <div>Lata 350ml</div>
-                        <div class="price-order">R$ 4,90</div>
-                        <div class="check">
-                            <ion-icon name="checkmark-circle"></ion-icon>
-                        </div>
+                        <img src=" ./images/coca-cola.png" />
+                    <div class="title-order">Coquinha gelada</div>
+                    <div>Lata 350ml</div>
+                    <div class="price-order">R$ 4,90</div>
+                    <div class="check">
+                        <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </div>
-            </section>
 
-            <section>
-                <div class="title"><h1>Por fim, sua sobremesa</h1></div>
-                <div class="options desserts">
-                    <div class="option dessert" onclick="selectDessert(event)">
-                        <img src="./images/pudim.png" />
-                        <div class="title-order">Pudim</div>
-                        <div>Apenas pudim</div>
-                        <div class="price-order">R$ 7,90</div>
-                        <div class="check">
-                            <ion-icon name="checkmark-circle"></ion-icon>
-                        </div>
-                    </div>
-
-                    <div class="option dessert" onclick="selectDessert(event)">
-                        <img src="./images/pudim.png" />
-                        <div class="title-order">Pudim</div>
-                        <div>Apenas pudim</div>
-                        <div class="price-order">R$ 7,90</div>
-                        <div class="check">
-                            <ion-icon name="checkmark-circle"></ion-icon>
-                        </div>
-                    </div>
-
-                    <div class="option dessert" onclick="selectDessert(event)">
-                        <img src="./images/pudim.png" />
-                        <div class="title-order">Pudim</div>
-                        <div>Apenas pudim</div>
-                        <div class="price-order">R$ 7,90</div>
-                        <div class="check">
-                            <ion-icon name="checkmark-circle"></ion-icon>
-                        </div>
-                    </div>
+                <div class="option drink" onclick="selectDrink(event)"">
+                        <img src=" ./images/coca-cola.png" />
+                <div class="title-order">Coquinha gelada</div>
+                <div>Lata 350ml</div>
+                <div class="price-order">R$ 4,90</div>
+                <div class="check">
+                    <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
-            </section>
         </div>
-        
+        </div>
+        </section>
+
+        <section>
+            <div class="title">
+                <h1>Por fim, sua sobremesa</h1>
+            </div>
+            <div class="options desserts">
+                <div class="option dessert" onclick="selectDessert(event)">
+                    <img src="./images/pudim.png" />
+                    <div class="title-order">Pudim</div>
+                    <div>Apenas pudim</div>
+                    <div class="price-order">R$ 7,90</div>
+                    <div class="check">
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="option dessert" onclick="selectDessert(event)">
+                    <img src="./images/pudim.png" />
+                    <div class="title-order">Pudim</div>
+                    <div>Apenas pudim</div>
+                    <div class="price-order">R$ 7,90</div>
+                    <div class="check">
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="option dessert" onclick="selectDessert(event)">
+                    <img src="./images/pudim.png" />
+                    <div class="title-order">Pudim</div>
+                    <div>Apenas pudim</div>
+                    <div class="price-order">R$ 7,90</div>
+                    <div class="check">
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
+
         <footer>
-            <a href="#" disabled class="button">
-                Selecione os 3 itens <br/> para fechar o pedido
+            <a href="#" disabled class="button-place-order" onclick="placeOrder()">
+                Selecione os 3 itens <br /> para fechar o pedido
             </a>
         </footer>
     </main>
@@ -170,4 +181,5 @@
 
     <script src="js/script.js"></script>
 </body>
+
 </html>

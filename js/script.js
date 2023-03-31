@@ -2,14 +2,17 @@ let selectedDishBuy = false;
 let selectedDrinkBuy = false;
 let selectedDessertBuy = false;
 
+let titleDish;
+let titleDrink;
+let titleDessert;
 
-function replaceButton(){
-    const button = document.querySelector('.button');
-    button.classList.remove('disable');
-    button.classList.add('active');
-    button.innerHTML = 'Fechar pedido';
+let priceDish;
+let priceDrink;
+let priceDessert;
 
-}
+
+
+
 
 function selectDish(event){
     const selectedDish = event.currentTarget;
@@ -53,7 +56,7 @@ function selectDessert(event){
     
     selectedDessertBuy = true;
     // selecao de prato
-    const markedPlate = document.querySelector('.dessert .select');
+    const markedPlate = document.querySelector('.desserts .select');
 
     if(markedPlate !== null){
         markedPlate.classList.remove('select')
@@ -67,8 +70,98 @@ function selectDessert(event){
     checkSelectedItems();
 }
 
+function replaceButton(){
+    if ( titleDish !== undefined){
+        if(titleDrink !== undefined){
+            if(titleDessert !== undefined){
+                const button = document.querySelector('.button-place-order');
+                button.classList.remove('disable');
+                button.classList.add('active');
+                button.innerHTML = 'Fechar pedido';
+            }
+        }
+    }
+}
+
+
+
 function checkSelectedItems(){
     if(selectedDishBuy && selectedDrinkBuy && selectedDessertBuy){
         replaceButton();
     }
 }
+
+
+function placeOrder(){
+    const confirmOrder = document.querySelector('.modal')
+    confirmOrder.classList.remove('hidden')
+
+    let list_items = ['.item-dish', '.item-drink', '.item-dessert']
+    let type_item = ['Dish', 'Drink', 'Dessert']
+
+    let items = {
+        Dish: {
+            title: titleDish,
+            price: priceDish
+        },
+        Drink: {
+            title: titleDrink,
+            price: priceDrink
+        },
+        Dessert: {
+            title: titleDessert,
+            price: priceDessert
+        }
+    }
+    let total= 0.0;
+    for (let i = 0; i < list_items.length; i++) {
+        let itemType = type_item[i];
+        let item = items[itemType];
+        document.querySelector(`${list_items[i]} .name`).innerHTML = item.title;
+        document.querySelector(`${list_items[i]} .price`).innerHTML = item.price;
+        
+        item.price = Number(item.price.replace('R$','').replace(',','.'));
+        
+        total += item.price;
+    }
+
+    document.querySelector('.total-order .total-num').innerHTML =`R$ ${total.toFixed(2)}`;
+}
+
+function cancelOrder() {
+    document.querySelector('.modal').classList.add('hidden');
+
+    if(selectedDishBuy && selectedDrinkBuy && selectedDessertBuy){
+        const button = document.querySelector('.button-place-order');
+        button.classList.add('disable');
+        button.classList.remove('active');
+        button.innerHTML = 'Selecione os 3 itens <br /> para fechar o pedido';
+    }
+    
+    selectedDishBuy = false;
+    selectedDrinkBuy = false;
+    selectedDessertBuy = false;
+    titleDish = undefined;
+    titleDrink = undefined;
+    titleDessert = undefined;
+    priceDish = undefined;
+    priceDrink = undefined;
+    priceDessert = undefined;
+
+    const markedPlatesDessert = document.querySelectorAll('.desserts .select');
+    const markedPlatesDishes = document.querySelectorAll('.dishes .select');
+    const markedPlatesDrinks = document.querySelectorAll('.drinks .select');
+  
+    markedPlatesDessert.forEach(function(plate) {
+      plate.classList.remove('select');
+    });
+  
+    markedPlatesDishes.forEach(function(plate) {
+      plate.classList.remove('select');
+    });
+  
+    markedPlatesDrinks.forEach(function(plate) {
+      plate.classList.remove('select');
+    });
+  }
+
