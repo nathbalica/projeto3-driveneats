@@ -175,7 +175,7 @@ function sendMessage(){
     - Prato: ${titleDish},
     - Bebida: ${titleDrink},
     - Sobremesa: ${titleDessert},
-    Total: ${total.toFixed(2)}
+    Total: R$ ${total.toFixed(2)}
     \n
     Nome: ${name}
     Endereço: ${address}
