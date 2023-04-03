@@ -104,7 +104,7 @@ header{
     justify-content: flex-start;
     align-items: center;
     padding: 20px;
-
+    z-index: 99;
 }
 
 header div{
@@ -201,7 +201,7 @@ section img{
     color: #000000;
 }
 
-.option .check{
+main .container section .options .option ion-icon{
     opacity: 0;
     color: #32B72F;
     font-size: 20px; 
@@ -212,7 +212,7 @@ main .container section .options .option.select{
     padding: 13px 9px;
 }
 
-main .container section .options .option.select .check{
+main .container section .options .option.select ion-icon{
     opacity: 1;
 }
 
@@ -243,7 +243,6 @@ footer a{
     font-size: 20px;
     color: #FFFFFF;
     letter-spacing: 0.018em;
-    /* padding: 0 70px; */
 
     display: flex;
     align-items: center;

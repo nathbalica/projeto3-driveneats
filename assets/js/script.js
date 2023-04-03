@@ -13,7 +13,6 @@ let priceDessert;
 let total= 0;
 
 
-
 function selectDish(event){
     const selectedDish = event.currentTarget;
     selectedDishBuy = true;
@@ -90,8 +89,12 @@ function checkSelectedItems(){
     }
 }
 
-
 function placeOrder(){
+
+    if(titleDish === undefined || titleDrink === undefined || titleDessert === undefined ){
+        document.querySelector('.modal').classList.add('hidden');
+    }
+    
     const confirmOrder = document.querySelector('.modal')
     confirmOrder.classList.remove('hidden')
 
