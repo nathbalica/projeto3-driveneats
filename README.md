@@ -16,5 +16,5 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 🚀 Resultado
 
 <p align="center">
-<img src="./assets/images/driveneats1.png" width="300px" height="500px"/>
+<img src="./assets/images/driveneats1.png"/>
 </p>
