@@ -91,14 +91,11 @@ function checkSelectedItems(){
 
 function placeOrder(){
 
-    if(titleDish === undefined || titleDrink === undefined || titleDessert === undefined ){
-        document.querySelector('.modal').classList.add('hidden');
+    if(titleDish !== undefined && titleDrink !== undefined && titleDessert !== undefined ){
+        const confirmOrder = document.querySelector('.modal')
+        confirmOrder.classList.remove('hidden')
     }
     
-    const confirmOrder = document.querySelector('.modal')
-    confirmOrder.classList.remove('hidden')
-
-
     let list_items = ['.item-dish', '.item-drink', '.item-dessert']
     let type_item = ['Dish', 'Drink', 'Dessert']
 

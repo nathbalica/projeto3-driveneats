@@ -28,6 +28,7 @@ h1{
 
     z-index: 1;
     padding: 20px;
+    z-index: 999;
 }
 
 .modal-confirm{

@@ -15,6 +15,23 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 🚀 Resultado
 
+- Aplicar layout para mobile, seguindo o Figma fornecido (não é necessário implementar um layout para desktop).
+
 <p align="center">
 <img src="./assets/images/driveneats1.png"/>
+</p>
+
+- Ao clicar sobre um item, ele deve ser marcado como selecionado.
+- Ao clicar em um item, caso já exista um item selecionado na mesma categoria, este deve ser 
+desmarcado e o novo item clicado deve ser o novo selecionado.
+- Quando o usuário tiver selecionado os itens das três categorias, o botão deve mudar para o estado de habilitado.
+
+<p align="center">
+<img src="./assets/images/fecharp.png"/>
+</p>
+
+- Ao finalizar o pedido, o usuário deverá ser encaminhado para o WhatsApp Web, em conversa com o contato do restaurante, já com uma mensagem padrão preenchida.
+
+<p align="center">
+<img src="./assets/images/tudocerto.png"/>
 </p>
