@@ -1,9 +1,5 @@
 # 💻 projeto3-driveneats
 
-<p align="center">
-<img src="logo.png" width="300px" height="300px"/>
-</p>
-
 ## Sobre
 -  Implementação do site (apenas a versão *mobile*) do DrivenEats, um restaurante especial que entrega seu pedido em 6 minutos!
 - Para isso, o restaurante só trabalha com um tipo específico de pedido: o combo de Prato + Bebida + Sobremesa.
@@ -20,5 +16,5 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 🚀 Resultado
 
 <p align="center">
-<img src="./assets/images/driveneats1.png" width="300px" height="300px"/>
+<img src="./assets/images/driveneats1.png" width="300px" height="500px"/>
 </p>
