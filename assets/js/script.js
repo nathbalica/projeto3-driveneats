@@ -75,14 +75,13 @@ function replaceButton(){
         if(titleDrink !== undefined){
             if(titleDessert !== undefined){
                 const button = document.querySelector('.button-place-order');
-                button.classList.remove('disable');
+                button.classList.remove('disabled');
                 button.classList.add('active');
                 button.innerHTML = 'Fechar pedido';
             }
         }
     }
 }
-
 
 
 function checkSelectedItems(){
@@ -95,6 +94,7 @@ function checkSelectedItems(){
 function placeOrder(){
     const confirmOrder = document.querySelector('.modal')
     confirmOrder.classList.remove('hidden')
+
 
     let list_items = ['.item-dish', '.item-drink', '.item-dessert']
     let type_item = ['Dish', 'Drink', 'Dessert']
@@ -133,7 +133,7 @@ function cancelOrder() {
 
     if(selectedDishBuy && selectedDrinkBuy && selectedDessertBuy){
         const button = document.querySelector('.button-place-order');
-        button.classList.add('disable');
+        button.classList.add('disabled');
         button.classList.remove('active');
         button.innerHTML = 'Selecione os 3 itens <br /> para fechar o pedido';
     }
